@@ -39,7 +39,7 @@ export class Modules extends Panel {
 	}
 
 	private registerListeners(): void {
-		
+
 	}
 
 
@@ -47,21 +47,39 @@ export class Modules extends Panel {
 		super.create(parent);
 		const container = dom.append(parent.getHTMLElement(), $('.modules'));
 
-		var str = nls.localize('helloModules', "Hello Modules");
-		var helloElement = document.createTextNode(str);
-		
-		container.appendChild(helloElement);
+		let button = document.createElement("button");
+		button.textContent = "Click Me!";
+		button.addEventListener("click", event => {
+			event.srcElement.remove();
+
+			let script1 = document.createElement("script");
+			script1.text = "var Module = { canvas: (function() { return document.getElementById('nes-canvas'); })() };";
+			document.body.appendChild(script1);
+
+			let script2 = document.createElement("script");
+			script2.src = "neSDL_exe.js";
+			document.body.appendChild(script2);
+		});
+
+		let canvas = document.createElement("canvas");
+		canvas.style.marginLeft = 'auto';
+		canvas.style.marginRight = 'auto';
+		canvas.style.display = 'block';
+		canvas.setAttribute('id', 'nes-canvas');
+
+		container.appendChild(button);
+		container.appendChild(canvas);
 
 		return TPromise.as(null);
 	}
-	
+
 
 	public layout(dimension: builder.Dimension): void {
-		
+
 	}
 
 	public focus(): void {
-		
+
 	}
 
 	public reveal(element: debug.ITreeElement): TPromise<void> {
@@ -83,7 +101,7 @@ export class Modules extends Panel {
 	}*/
 
 	public shutdown(): void {
-		
+
 	}
 
 	public dispose(): void {

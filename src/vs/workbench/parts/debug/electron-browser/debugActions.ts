@@ -814,7 +814,7 @@ export class ToggleReplAction extends AbstractDebugAction {
 
 export class ToggleModulesAction extends AbstractDebugAction {
 	static ID = 'workbench.debug.action.toggleModules';
-	static LABEL = nls.localize({ comment: ['Debug is a noun in this context, not a verb.'], key: 'debugModulesAction' }, 'Debug Modules');
+	static LABEL = nls.localize({ comment: ['Debug is a noun in this context, not a verb.'], key: 'debugModulesAction' }, 'Productivity Mode');
 
 	constructor(id: string, label: string,
 		@IDebugService debugService: IDebugService,

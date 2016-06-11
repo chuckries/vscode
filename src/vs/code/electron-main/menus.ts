@@ -519,7 +519,7 @@ export class VSCodeMenu {
 		let debugConsole = this.createMenuItem(nls.localize({ key: 'miToggleDebugConsole', comment: ['&& denotes a mnemonic'] }, "De&&bug Console"), 'workbench.debug.action.toggleRepl');
 		let integratedTerminal = this.createMenuItem(nls.localize({ key: 'miToggleIntegratedTerminal', comment: ['&& denotes a mnemonic'] }, "&&Integrated Terminal"), 'workbench.action.terminal.toggleTerminal');
 		let problems = this.createMenuItem(nls.localize({ key: 'miMarker', comment: ['&& denotes a mnemonic'] }, "&&Problems"), 'workbench.action.markers.panel.toggle');
-		let modules = this.createMenuItem(nls.localize({ key: 'miToggleModules', comment: ['&& denotes a mnemonic'] }, "&&Debug Modules"), 'workbench.debug.action.toggleModules');
+		let modules = this.createMenuItem(nls.localize({ key: 'miToggleModules', comment: ['&& denotes a mnemonic'] }, "&&Productivity Mode"), 'workbench.debug.action.toggleModules');
 
 		let panelsMenu = new Menu();
 		[

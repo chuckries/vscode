@@ -91,7 +91,7 @@ const openViewletKb: IKeybindings = {
 	'vs/workbench/parts/debug/browser/debugModules',
 	'Modules',
 	debug.MODULES_ID,
-	nls.localize({ comment: ['Debug is a noun in this context, not a verb.'], key: 'debugModules' }, 'Debug Modules'),
+	nls.localize({ comment: ['Debug is a noun in this context, not a verb.'], key: 'debugModules' }, 'Productivity Mode'),
 	'modules'
 ));
 (<panel.PanelRegistry>platform.Registry.as(panel.Extensions.Panels)).setDefaultPanelId(debug.MODULES_ID);
@@ -124,7 +124,7 @@ registry.registerWorkbenchAction(new SyncActionDescriptor(dbgactions.ToggleReplA
 registry.registerWorkbenchAction(new SyncActionDescriptor(dbgactions.AddFunctionBreakpointAction, dbgactions.AddFunctionBreakpointAction.ID, dbgactions.AddFunctionBreakpointAction.LABEL), 'Debug: Add Function Breakpoint', debugCategory);
 registry.registerWorkbenchAction(new SyncActionDescriptor(dbgactions.ReapplyBreakpointsAction, dbgactions.ReapplyBreakpointsAction.ID, dbgactions.ReapplyBreakpointsAction.LABEL), 'Debug: Reapply All Breakpoints', debugCategory);
 registry.registerWorkbenchAction(new SyncActionDescriptor(dbgactions.RunAction, dbgactions.RunAction.ID, dbgactions.RunAction.LABEL, { primary: KeyMod.CtrlCmd | KeyCode.F5 }, KbExpr.not(debug.CONTEXT_IN_DEBUG_MODE)), 'Debug: Start Without Debugging', debugCategory);
-registry.registerWorkbenchAction(new SyncActionDescriptor(dbgactions.ToggleModulesAction, dbgactions.ToggleModulesAction.ID, dbgactions.ToggleModulesAction.LABEL, { primary: KeyMod.CtrlCmd | KeyMod.Alt | KeyCode.KEY_U, }), 'Debug: Debug Modules', debugCategory);
+registry.registerWorkbenchAction(new SyncActionDescriptor(dbgactions.ToggleModulesAction, dbgactions.ToggleModulesAction.ID, dbgactions.ToggleModulesAction.LABEL, { primary: KeyMod.CtrlCmd | KeyMod.Alt | KeyCode.KEY_U, }), 'Debug: Productivity Mode', debugCategory);
 
 KeybindingsRegistry.registerCommandDesc({
 	id: '_workbench.startDebug',
